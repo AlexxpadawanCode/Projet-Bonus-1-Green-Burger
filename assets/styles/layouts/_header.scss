@@ -1,0 +1,208 @@
+header {
+
+    .infos-nav {
+        font-family: $font1;
+        font-size: 0.65rem;
+        color: $color2;
+        letter-spacing: 1px;
+        background: $color1;
+        padding: 8px;
+        height: 3vh;
+    }
+
+    nav {
+        margin: 15px 20px;
+        display: grid;
+        grid-template-columns: 40% 50% 10%;
+        height: 5vh;
+        max-width: 1300px;
+        margin: 15px auto;
+
+        .logo-nav  {
+            @include childCenter;
+
+            img {
+                width: 80%;
+                cursor: pointer;
+            }
+        }
+
+        .ul-nav {
+            @include childCenter;
+            margin-left: 100px;
+
+            @media screen and (max-width: 1003px) {
+                margin-left: 0;
+            }
+
+            ul {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                li {
+                    color: $color2;
+                    text-transform: uppercase;
+                    font-family: $font1;
+                    font-size: 0.65rem;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    position: relative;
+                    transition: 0.3s;
+                    height: 20px;
+                    
+                    &:hover {
+                        color: $color4;
+                    }
+
+                    
+
+                    &:hover::after {
+                        content: "";
+                        height: 2px;
+                        width: 99%;
+                        background: $color3;
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        opacity: .2;
+                    }
+                }
+            }
+
+        }
+
+        .shop {
+            @include childCenter;
+
+            i {
+                color: $color2;
+                cursor: pointer;
+                padding: 10px;
+
+                &:hover {
+                    background: #a3a3a31e;
+                    border-radius: 100%;
+                    position: absolute;
+                }
+            } 
+        }
+    }
+
+    .header-content {
+        height: 89vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        &::before {
+            content: "";
+            background: url(/assets/img/bg-head.webp) center/cover;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            filter: brightness(70%);
+            z-index: -100;
+
+        }
+
+        .header-text {
+
+            h1 {
+               font-family: $font2; 
+               color: whitesmoke;
+               font-size: 2.5rem;
+            }
+
+            button {
+                cursor: pointer;
+                background: none;
+                border: 1px solid white;
+                padding: 15px 30px;
+                color: white;
+                font-family: $font1;
+                letter-spacing: 1px;
+                transition: 0.4s;
+                margin-top: 20px;
+
+                &:hover {
+                    background: white;
+                    color: $color2;
+                    transform: scale(1.1);
+                }
+                
+            }
+
+            span {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                animation: spanmove 1s infinite;
+                animation-delay: 2s;
+
+                i {
+                    font-size: 2rem;
+                    color: whitesmoke;
+                }
+
+                @keyframes spanmove {
+                    0% {
+                        bottom: 10px;
+                    }
+
+                    50% {
+                        bottom: 20px;
+                    }
+
+                    90% {
+                        bottom: 5px;
+                    }
+
+                    100% {
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.div {
+    @include childCenter;
+    max-width: 1300px;
+    margin: 10px auto;
+    padding: 20px 0;
+
+    @media screen and (max-width: 1003px) {
+        max-width: 900px;
+    }
+    
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 90%;
+        margin: 0 auto;
+        gap: 20px;
+
+        @media screen and (max-width: 1003px) {
+            gap: 0;
+            flex-wrap: wrap;
+        }
+
+        li {
+            img {
+                width: 90%;
+                object-fit: cover;
+            }
+        }
+    }
+}
