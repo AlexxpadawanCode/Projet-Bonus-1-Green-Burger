@@ -8,6 +8,10 @@ header {
         background: $color1;
         padding: 8px;
         height: 3vh;
+
+        @media screen and (max-width: 890px) {
+            display: none;
+        }
     }
 
     nav {
@@ -17,6 +21,11 @@ header {
         height: 5vh;
         max-width: 1300px;
         margin: 15px auto;
+
+        @media screen and (max-width: 890px) {
+            display: grid;
+            grid-template-columns: 80% 20%;
+        }
 
         .logo-nav  {
             @include childCenter;
@@ -33,6 +42,10 @@ header {
 
             @media screen and (max-width: 1003px) {
                 margin-left: 0;
+            }
+
+            @media screen and (max-width: 890px) {
+                display: none;
             }
 
             ul {
@@ -177,31 +190,26 @@ header {
 .div {
     @include childCenter;
     max-width: 1300px;
+    width: 90%;
     margin: 10px auto;
     padding: 20px 0;
 
-    @media screen and (max-width: 1003px) {
-        max-width: 900px;
-    }
-    
+    .li-logos {
+            
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 90%;
+            margin: 0 auto;
+            gap: 20px;
 
-    ul {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 90%;
-        margin: 0 auto;
-        gap: 20px;
+            li {
 
-        @media screen and (max-width: 1003px) {
-            gap: 0;
-            flex-wrap: wrap;
-        }
-
-        li {
-            img {
-                width: 90%;
-                object-fit: cover;
+                img {
+                    width: 90%;
+                    object-fit: cover;
+                }
             }
         }
     }

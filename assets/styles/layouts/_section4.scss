@@ -1,0 +1,84 @@
+.section4 {
+    margin: 100px 0 30px;
+    min-height: 0px;
+
+    .first-part {
+
+        h3 {
+            @include title;
+        }
+
+        .comments {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1100px;
+            margin: 40px auto;
+
+            @media screen and (max-width: 750px) {
+                display: block;
+            }
+
+            .comments-content {
+
+                p {
+                    font-family: $font4;
+                    font-size: 0.85rem;
+                    color: $color4;
+                    line-height: 20px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    .second-part {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 450px;
+
+        @media screen and (max-width: 750px) {
+            display: block;
+        }
+
+        .left-part {
+            @include childCenter;
+            flex-direction: column;
+            background: $color4;
+
+            h3 {
+                @include title;
+            }
+            
+
+            p {
+                font-family: $font4;
+                font-size: 0.85rem;
+                color: whitesmoke;
+                line-height: 25px;
+                margin-bottom: 10px;    
+            }
+
+            button {
+                border: none;
+                background: rgb(218, 218, 218);
+                text-transform: uppercase;
+                font-family: $font2;
+                font-size: 0.70rem;
+                letter-spacing: 1px;
+                padding: 7px;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    background: white;
+                }
+            }
+        }
+
+        .right-part {
+            background: url(/assets/img/restaurant_antibes_bio.webp) center/cover;
+        }
+    }
+}

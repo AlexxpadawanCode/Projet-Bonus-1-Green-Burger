@@ -1,0 +1,73 @@
+.section1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+
+    @media screen and (max-width: 750px) {
+        margin-bottom: -450px;
+    }
+
+    @media screen and (max-width: 750px) {
+        display: block;
+    }
+
+    .left-img1 {
+        background: url(/assets/img/presentation1.webp) center/cover;
+        filter: brightness(90%);
+        
+    }
+
+    .right-text1 {
+        @include childCenter;
+        margin: 20px 150px;
+
+        @media screen and (max-width: 1300px) {
+            margin: 20px;
+        }
+
+        .right-text1-content {
+            h3 {
+                @include title;
+            }
+
+            p {
+                font-family: $font4;
+                font-size: 0.85rem;
+                color: $color4;
+                line-height: 20px;
+                
+            }
+        }
+    }
+
+    .left-text1 {
+        @include childCenter;
+        margin: 20px 150px;
+
+        @media screen and (max-width: 1300px) {
+            margin: 20px;
+        }
+
+        .left-text1-content {
+            h3 {
+                @include title;
+            }
+
+            p {
+                font-family: $font4;
+                font-size: 0.85rem;
+                color: $color4;
+                line-height: 20px;
+                margin-bottom: 15px;
+            }
+            
+            
+        }
+    }
+
+    .right-img1 {
+        background: url(/assets/img/presentation2.webp) center/cover;
+        filter: brightness(90%);
+        width: 100%;
+    }
+}
