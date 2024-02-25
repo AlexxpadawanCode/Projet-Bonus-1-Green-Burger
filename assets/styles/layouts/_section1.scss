@@ -3,18 +3,17 @@
     grid-template-columns: 1fr 1fr;
     height: 100vh;
 
-    @media screen and (max-width: 750px) {
-        margin-bottom: -450px;
-    }
+    
 
     @media screen and (max-width: 750px) {
-        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
     .left-img1 {
         background: url(/assets/img/presentation1.webp) center/cover;
-        filter: brightness(90%);
-        
+        filter: brightness(90%);       
     }
 
     .right-text1 {

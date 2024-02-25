@@ -4,7 +4,9 @@
     height: 100vh;
 
     @media screen and (max-width: 750px) {
-        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
     }
 
     .left-img2 {
